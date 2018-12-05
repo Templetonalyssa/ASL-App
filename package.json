@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "asl_app",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "ASL translator",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
