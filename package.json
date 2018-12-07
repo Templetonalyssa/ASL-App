@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "asl_app",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "ASL translator",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,10 +11,14 @@
   },
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
     "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "rateyo": "^2.3.5",
     "sequelize": "^4.38.0"
   },
