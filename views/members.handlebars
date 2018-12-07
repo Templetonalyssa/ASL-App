@@ -1,1 +1,67 @@
+<div id="members">
 
+  <div class="top3container">
+
+     <div id= "main header" class="w3-container w3-white">
+  <strong><h1>ASL App</h1></strong>
+  <div class="w3-container">
+
+  <button id="communitybutton" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-large">Community</button>
+
+</div>
+            
+</div> 
+
+    <div id="topSearches">
+      <div id="top1">Top search 1</div>
+      <div id="top2">Top search 2</div>
+      <div id="top3">Top search 3</div>
+    </div>
+
+  <div class="searchdiv">
+    <label id="phrasesearchlabel" class="w3-text-black"><b>Phrase Search</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
+
+    <label id="namesearchlabel" class="w3-text-black"><b>Name Search</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="See how to sign your name in ASL here">
+    <button class="w3-btn w3-black">Search</button>
+    </div>
+
+  <div class="videodiv"></div>
+
+  <div id="rateYo"></div>
+    
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+{{!-- javascript and style for RATEYO --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+
+{{!-- javascript for rateyo --}}
+<script>
+    $(function () {
+ 
+  $("#rateYo").rateYo({
+ 
+    rating    : 1.6,
+    spacing   : "5px",
+    multiColor: {
+ 
+      "startColor": "#FF0000", //RED
+      "endColor"  : "#00FF00"  //GREEN
+    }
+  });
+ 
+});
+
+// Getter
+var ratedFill = $("#rateYo").rateYo("option", "multiColor"); //returns `Object`
+ 
+// Setter
+$("#rateYo").rateYo("option", "multiColor", false); // disables multi color rating and returns a jQuery Element
+</script>
