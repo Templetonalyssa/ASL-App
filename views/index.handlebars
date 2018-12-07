@@ -1,44 +1,40 @@
 <div id="home">
 
   <div class="top3container">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2"></div>
       </div>
     </div>
+    <div class="searchdiv">
+      <label class="w3-text-black"><b>Phrase Search</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
 
-  </div>
-  <div class="searchdiv">
-    <label class="w3-text-black"><b>Phrase Search</b></label>
-    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
-
-    <label class="w3-text-black"><b>Name Search</b></label>
-    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="See how to sign your name in ASL here">
+      <label class="w3-text-black"><b>Name Search</b></label>
+      <input class="w3-input w3-border w3-light-grey" type="text" placeholder="See how to sign your name in ASL here">
    
+      <button class="w3-btn w3-black">Search</button>
+    </div>
 
-    <button class="w3-btn w3-black">Search</button>
+  <div class="videodiv"></div>
 
-  </div>
-
-  <div class="videodiv">
-
-  </div>
-
-<span class="starRating">
-  <input id="rating5" type="radio" name="rating" value="5">
-  <label for="rating5">5</label>
-  <input id="rating4" type="radio" name="rating" value="4">
-  <label for="rating4">4</label>
-  <input id="rating3" type="radio" name="rating" value="3">
-  <label for="rating3">3</label>
-  <input id="rating2" type="radio" name="rating" value="2">
-  <label for="rating2">2</label>
-  <input id="rating1" type="radio" name="rating" value="1">
-  <label for="rating1">1</label>
-</span>
+  {{!-- <span class="starRating">
+    <input id="rating5" type="radio" name="rating" value="5">
+      <label for="rating5">5</label>
+    <input id="rating4" type="radio" name="rating" value="4">
+      <label for="rating4">4</label>
+    <input id="rating3" type="radio" name="rating" value="3">
+      <label for="rating3">3</label>
+    <input id="rating2" type="radio" name="rating" value="2">
+      <label for="rating2">2</label>
+    <input id="rating1" type="radio" name="rating" value="1">
+      <label for="rating1">1</label>
+  </span> --}}
  
 
+  <div id="rateYo"></div>
+
+  </div>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -47,3 +43,28 @@
 {{!-- javascript and style for RATEYO --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+
+{{!-- javascript for rateyo --}}
+<script>
+    $(function () {
+ 
+  $("#rateYo").rateYo({
+ 
+    rating    : 1.6,
+    spacing   : "5px",
+    multiColor: {
+ 
+      "startColor": "#FF0000", //RED
+      "endColor"  : "#00FF00"  //GREEN
+    }
+  });
+ 
+});
+
+// Getter
+var ratedFill = $("#rateYo").rateYo("option", "multiColor"); //returns `Object`
+ 
+// Setter
+$("#rateYo").rateYo("option", "multiColor", false); // disables multi color rating and returns a jQuery Element
+</script>
