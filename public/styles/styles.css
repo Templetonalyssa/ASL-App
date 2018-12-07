@@ -52,8 +52,6 @@ footer {
 .starRating:not(old) > label:hover ~ label:before,
 .starRating:not(:hover) > :checked ~ label:before{
   opacity : 1;
-  
-#topSearches {
 }
 
 #top1 {
