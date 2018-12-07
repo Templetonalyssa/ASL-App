@@ -97,16 +97,3 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-$(function () {
- 
-  $("#rateYo").rateYo({
-    normalFill: "#A0A0A0"
-  });
- 
-});
-
-var normalFill = $("#rateYo").rateYo("option", "normalFill"); //returns "#A0A0A0"
- 
-// Setter
-$("#rateYo").rateYo("option", "normalFill", "#B0B0B0"); //returns a jQuery Element
