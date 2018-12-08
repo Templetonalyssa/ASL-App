@@ -27,6 +27,11 @@ module.exports = function(app) {
     });
   });
 
+//app.get for the Resources/Community Page
+  app.get("/community",  function(req,res) {
+    res.render("community");
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
