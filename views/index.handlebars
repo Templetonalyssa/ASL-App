@@ -16,14 +16,14 @@
 
       </div>
 
-      <form  id="modalbox" class="w3-container" action="/action_page.php">
+      <form  id="modalbox" class="w3-container" >
         <div class="w3-section">
           <label><b>Username</b></label>
-          <input id= "username" class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+          <input id= "username" class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
           <label><b>Password</b></label>
           <input id ="password" class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
-          <button id="login" class="w3-button w3-block w3-black w3-section w3-padding" type="submit">Login</button>
-          <button id="signup" class="w3-button w3-block w3-black w3-section w3-padding" type="submit">Signup</button>
+          <button id="login" class="w3-button w3-block w3-black w3-section w3-padding" >Login</button>
+          <button id="signup" class="w3-button w3-block w3-black w3-section w3-padding" >Signup</button>
           {{!-- <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me --}}
         </div>
       </form>
@@ -64,7 +64,8 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
-
+<script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
 {{!-- javascript and style for RATEYO --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>

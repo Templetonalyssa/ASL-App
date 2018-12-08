@@ -1,12 +1,13 @@
 $(document).ready(function() {
     // Getting references to our form and input
-    var signUpForm = $("form#modalbox");
-    var emailInput = $("input#username");
-    var passwordInput = $("input#password");
+    var signUpForm = $("#signup");
+    var emailInput = $("#username");
+    var passwordInput = $("#password");
   
     // When the signup button is clicked, we validate the email and password are not blank
-    signUpForm.on("#signup", function(event) {
+    signUpForm.on("click", function(event) {
       event.preventDefault();
+      console.log("button clicked "+emailInput+" "+passwordInput)
       var userData = {
         email: emailInput.val().trim(),
         password: passwordInput.val().trim()
