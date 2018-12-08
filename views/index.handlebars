@@ -1,19 +1,37 @@
 <div id="home">
 
   <div class="top3container">
-    <div class="container">
-      <div class="row">
-        <div class="col-8 offset-2"></div>
-      </div>
-    </div> 
-    <div class="searchdiv">
-      <label class="w3-text-black"><b>Phrase Search</b></label>
-      <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
 
-      <label class="w3-text-black"><b>Name Search</b></label>
-      <input class="w3-input w3-border w3-light-grey" type="text" placeholder="See how to sign your name in ASL here">
-   
-      <button class="w3-btn w3-black">Search</button>
+    <div id= "main header" class="w3-container w3-white">
+  <strong><h1>ASL App</h1></strong>
+  <div class="w3-container">
+
+  <button id="mainloginbutton" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-large">Login/Signup</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+
+      </div>
+
+      <form  id="modalbox" class="w3-container" action="/action_page.php">
+        <div class="w3-section">
+          <label><b>Username</b></label>
+          <input id= "username" class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+          <label><b>Password</b></label>
+          <input id ="password" class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+          <button id="login" class="w3-button w3-block w3-black w3-section w3-padding" type="submit">Login</button>
+          <button id="signup" class="w3-button w3-block w3-black w3-section w3-padding" type="submit">Signup</button>
+          {{!-- <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me --}}
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      </div>
+
     </div>
 
   <div class="videodiv"></div>
