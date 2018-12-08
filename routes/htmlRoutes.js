@@ -1,4 +1,7 @@
 var db = require("../models");
+var path = require("path");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
 
 module.exports = function(app) {
   // Load index page
@@ -11,10 +14,14 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/members", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/members.html"));
+  });
+
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
+  app.get("/members/:id?", function(req, res) {
     db.Asl.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
+      res.render("members", {
         example: dbExample
       });
     });
