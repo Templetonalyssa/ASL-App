@@ -33,14 +33,32 @@
       </div>
 
     </div>
+  </div>
+</div>
+            
+</div>
+
+    {{!-- top searches, would like video boxes to show up here --}}
+    <div id="topSearches"> 
+      <iframe id="top1" src="#">Top search 1</iframe>
+      <iframe id="top2" src="#">Top search 2</iframe>
+      <iframe id="top3" src="#">Top search 3</iframe>
+    </div>
+
+  <div class="searchdiv">
+    <label id="phrasesearchlabel" class="w3-text-black"><b>Phrase Search</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
+
+    <label id="namesearchlabel" class="w3-text-black"><b>Name Search</b></label>
+    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="See how to sign your name in ASL here">
+    <button class="w3-btn w3-black">Search</button>
+    </div>
 
   <div class="videodiv"></div>
 
-
- 
-
+{{!-- for stars --}}
   <div id="rateYo"></div>
-
+    
   </div>
 </div>
 
@@ -68,7 +86,6 @@
   });
  
 });
-
 // Getter
 var ratedFill = $("#rateYo").rateYo("option", "multiColor"); //returns `Object`
  
