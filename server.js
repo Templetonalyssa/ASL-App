@@ -1,7 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-
+var passport = require("./config/passport");
 var db = require("./models");
 
 var app = express();
@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
 
+app.use(passport.initialize());
+app.use(passport.session());
 // Handlebars
 app.engine(
   "handlebars",
