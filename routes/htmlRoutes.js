@@ -8,28 +8,29 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Asl.findAll({}).then(function(dbExamples) {
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+        // msg: "Welcome!",
+        // examples: dbExamples
       });
     });
-  });
-
-  app.get("/members", isAuthenticated, function(req, res) {
-    res.render("members");
   });
 
   // Load example page and pass in an example by id
-  app.get("/members/:id?", function(req, res) {
-    db.Asl.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("members", {
-        example: dbExample
-      });
-    });
-  });
+  // app.get("/members/:id?", function(req, res) {
+  //   db.Asl.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.render("members", {
+  //       example: dbExample
+  //     });
+  //   });
+  // });
 
 //app.get for the Resources/Community Page
-  app.get("/community",  function(req,res) {
+  app.get("/community",  function(req, res) {
     res.render("community");
+  });
+
+  //app.get for the Resources/Community Page
+  app.get("/members",  function(req, res) {
+    res.render("members");
   });
 
   // Render 404 page for any unmatched routes
