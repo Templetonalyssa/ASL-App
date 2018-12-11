@@ -15,7 +15,7 @@ footer {
   text-align: center;
 }
 
-#mainloginbutton {
+#communitybutton, #homebutton, #mainloginbutton {
    float: right;
    margin-top: -40px;
    margin-bottom: 10px;
@@ -44,3 +44,19 @@ footer {
 /* .searchdiv {
   text-align: center;
 } */
+#top1,#top2,#top3{
+  margin: 20px;
+}
+
+#topSearches{
+  margin: auto;
+}
+
+.searchdiv{
+  margin: 20px;
+}
+
+#savedsearchcard{
+  float: right;
+  margin-top: -313px;
+}
