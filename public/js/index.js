@@ -94,6 +94,20 @@ var handleDeleteBtnClick = function() {
   });
 };
 
+//youtube ajax hopefully of #phrasesearchlabel submit button
+$("#search").on("click", function(event){
+  event.preventDefault();
+  $.ajax({
+    url:"https://www.googleapis.com/youtube/v3/channels?key={AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk}&forUsername=UC2a61_fpDR-lcZQX342ho2w=id",
+    dataType: "json",
+    method: "GET"
+  }).then(function(response){
+    $("#searchResult").attr("src", "http://www.youtube.com/user/"+response.matches)
+    $(".videodiv").attr("data-url", "http://www.youtube.com/user/"+response.matches)
+    console.log(response.matches)
+  });
+});
+
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
