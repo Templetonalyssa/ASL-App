@@ -19,7 +19,7 @@ module.exports = function(app) {
   });
 
   //app.get for the Resources/Community Page
-  app.get("/members", isAuthenticated, function(req, res) {
+  app.get("/members",  function(req, res) {
     res.render("members");
   });
 
