@@ -50,16 +50,14 @@ Sign language is not a universal language — each country has its own sign lang
     {{!-- top searches, would like video boxes to show up here --}}
     <div id="topSearches"> 
       <button id="top1" src="#">Top search 1</button>
-    
       <button id="top2" src="#">Top search 2</button>
-    
       <button id="top3" src="#">Top search 3</button>
       
     </div>
 
-     <div class="videodiv">
-     <iframe id="searchResult" src="#">Result here</iframe>
-  </div> 
+    <div class="videodiv">
+        <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed?listType=search&list=" frameborder="0"></iframe>    
+    </div> 
 
       {{!-- <div id="rateYo"></div> --}}
       <div id="rateYo"></div>
@@ -67,9 +65,9 @@ Sign language is not a universal language — each country has its own sign lang
 
   <div class="searchdiv">
     <label id="phrasesearchlabel" class="w3-text-black"><b>Phrase Search</b></label>
-    <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
-     <button id ="search" class="w3-btn w3-black">Search</button>
-    </div>
+    <input id ="textInput"class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
+    <button id ="search" class="w3-btn w3-black">Search</button>
+  </div>
     
   </div>
 </div>
