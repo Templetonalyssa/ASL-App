@@ -1,0 +1,24 @@
+
+
+@font-face{
+    font-family: "asl";
+    src: url("./img/GALLAUDET.ttf")
+    format("truetype"); 
+}
+
+/* .jumbotron, .text-center {
+    font-family: "mysteryTour";
+    font-size: 60px;
+    background-image: url("./images/psychedelic.jpg");
+    text-decoration: underline;
+} */
+
+#translator {
+  font-family: 'asl';
+  padding: 0;
+  font-size: 100px;
+  border: 0;
+  width: 100%;
+}
+
+

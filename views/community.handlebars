@@ -43,8 +43,29 @@
              <br>
         </div>
 
+         <div id="asltranslatecard" class="wrapper">
+
+        <div class="inputform">
+            <input id = "translator" type="text" name="fontTxtField" id="fontTxtField" placeholder="Your text here" />
+        </div>
+     <button id="translatebutton" onclick="swapStyleSheet('./public/styles/teststyle.css')">Translate to ASL</button>
+     <button id="regularfont" onclick="swapStyleSheet('regularfont.css')">Type in Regular Font</button>
+   
+
+    </div>
+
 </div>
     
+
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <script>
+    function swapStyleSheet(sheet) {
+        console.log("clickedyay")
+            document.getElementById('pagestyle').setAttribute('href', sheet);
+        };
+    
+</script>
    
 
   
