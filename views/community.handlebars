@@ -32,9 +32,18 @@
          <h1>Saved Searches</h1>
               <table class="table table-sm table-hover" id='savedsearchtable'>
                             <thead>
-                                <tr id="savedsearchtable">
-                                    
+                                <tr>
+                                  <th>Rating</th>
+                                  <th>Phrase</th>  
                                 </tr>
+                                {{#each saved}}
+			  	                    {{#if this.user_id}}
+                                    <tr>
+                                        <td>{{this.rating}}</td>
+                                        <td>{{this.search}}</td>
+                                    </tr>
+                                    {{/if}}
+			                    {{/each}}
                             </thead>
                             <tbody>
                             </tbody>
