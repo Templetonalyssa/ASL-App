@@ -19,12 +19,13 @@ $("#search").on("click", function (event) {
   .catch(function(err){
     console.log(err);
   });
+  upsert({ count: 1 }, { search: $(".search-phrase").val().trim() }).then(function(result){
+  res.status(200).send({success: true});
+  });
 });
 
 
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+
 
 
 function upsert(value, condition) {
@@ -41,6 +42,3 @@ function upsert(value, condition) {
     })
 }
 
-upsert({ count: 1 }, { search: $(".search-phrase").val().trim() }).then(function(result){
-  res.status(200).send({success: true});
-});
