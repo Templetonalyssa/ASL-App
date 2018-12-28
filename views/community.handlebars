@@ -3,7 +3,7 @@
     <div id="main header" class="w3-container w3-white">
 
         <strong>
-            <h1>ASL App</h1>
+            <h1>American Sign Language App</h1>
         </strong>
         <div class="w3-container">
 
@@ -14,9 +14,10 @@
         </div>
 
     </div>
+    <br>
+<marquee behavior="scroll" direction="left"> French Sign Language and American Sign Language are the most alike. ⬤ The deaf don’t clap after a performance or a show; instead they wiggle their hands in the air. ⬤ Deafness is not seen as a handicap, but rather as an asset that brings its members together, forming a whole community and a culture all to itself (some deaf people actually refuse implants or hearing aids for this reason). ⬤ Sign language was formally developed in the 17th century in Europe. ⬤ ASL was developed in Hartford, CT in 1814. ⬤ Heather Whitestone was the First and Only Deaf Person to Win the Miss America Pageant in 1995.</marquee>
 
-
-        <div id="communitylinks" class="w3-panel w3-card-4 w3-white" style="width: 700px;">
+        <div id="communitylinks" class="w3-panel w3-card-4 w3-white" style="width: 700px; margin-left: 30px;" >
          <h1>Resources</h1>
             <p>Here are some popular and useful websites to seek out other ASL speakers in your community.</p>
              <li><a href="https://www.nad.org/events/">Events for National Association of the Deaf </a></li>
@@ -28,7 +29,7 @@
              <br>
         </div>
         
-        <div id="savedsearchcard" class="w3-panel w3-card-4 w3-white" style="width: 700px;">
+        <div id="savedsearchcard" class="w3-panel w3-card-4 w3-white" style="width: 700px; margin-right: 30px;">
          <h1>Saved Searches</h1>
               <table class="table table-sm table-hover" id='savedsearchtable'>
                             <thead>
@@ -52,28 +53,39 @@
              <br>
         </div>
 
-         <div id="asltranslatecard" class="wrapper">
-
-        <div class="inputform">
-            <input id = "translator" type="text" name="fontTxtField" id="fontTxtField" placeholder="Your text here" />
-        </div>
-     <button id="translatebutton" onclick="swapStyleSheet('./public/styles/teststyle.css')">Translate to ASL</button>
-     <button id="regularfont" onclick="swapStyleSheet('regularfont.css')">Type in Regular Font</button>
-   
-
+           <div class="inputform">
+        <input id="inputformbox" type="text" name="fontTxtField" id="fontTxtField" placeholder="Enter a word to translate." />
     </div>
-
+    <br>
+        <button id="translatebutton" class="w3-btn w3-black" onclick="myTranslate()">Translate to ASL</button>
+        <button id="regularfont" class="w3-btn w3-black" onclick="myEnglish()">English</button>
+    <br>
+    <br>
+    <br>
 </div>
+    <br>
     
 
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
  <script>
-    function swapStyleSheet(sheet) {
-        console.log("clickedyay")
-            document.getElementById('pagestyle').setAttribute('href', sheet);
-        };
+    var inputBoxForm = document.getElementById("inputformbox"),
+    translateButton = document.getElementById('translatebutton'); 
+    regularFont= document.getElementById('regularfont');
     
+function myTranslate() {
+   var button1 = this;
+  inputBoxForm.style = "font-family: asl";
+}
+
+function myEnglish() {
+  console.log("god save the queen")
+  var button2 = this;
+  inputBoxForm.style = "font-family: Arial";
+  
+}
+
+console.log("halp")
 </script>
    
 
