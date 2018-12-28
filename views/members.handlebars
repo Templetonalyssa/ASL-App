@@ -3,7 +3,7 @@
   <div class="top3container">
 
      <div id= "main header" class="w3-container w3-white">
-  <strong><h1>ASL App</h1></strong>
+  <strong><h1>American Sign Language App</h1></strong>
   <div class="w3-container">
 
   <a href="/logout"><button id="communitybutton" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black w3-large">Logout</button></a>
@@ -15,9 +15,15 @@
             
 </div> 
 
-<div class="w3-panel w3-card-4 w3-white"><p>American Sign Language (ASL) is a visual language. ASL is used mainly in the United States and in many parts of Canada. With signing, the brain processes linguistic information through the eyes. The shape, placement, movement of the hands,as well as facial expressions and body movements, all play important parts in conveying information.
+ <marquee behavior="scroll" direction="left"> There are more than 200 different sign languages used around the world.
+ ⬤ If an individual uses incorrect grammar while signing, they can be considered to have a 'foreign' accent. ⬤ Babies that are born deaf learn to use sign language to communicate in the same way babies born with hearing begin to use words to communicate. ⬤ Most of the courses taught at Gallaudet University in Washington, D.C., are taught in ASL.</marquee>
 
-Sign language is not a universal language — each country has its own sign language, and regions have dialects, much like the many languages spoken all over the world. Like any spoken language, ASL is a language with its own unique rules of grammar and syntax, and continues to grow and change over time. We hope you'll enjoy using this app to assist you in communicating with other ASL speakers and participate in ASL community events near you.</p></div>   
+
+    <div id="Demo3" class="w3-hide w3-container w3-center w3-white">
+  <p>American Sign Language (ASL) is a visual language. ASL is used mainly in the United States and in many parts of Canada. The shape, placement, movement of the hands,as well as facial expressions and body movements, all play important parts in conveying information.
+
+Sign language is not a universal language — each country has its own sign language, much like spoken languages. ASL is a language with its own unique rules of grammar and syntax, and continues to grow and change over time. We hope you'll enjoy using this app to assist you in communicating with other ASL speakers and participate in ASL community events near you.</p>
+</div>    
 
 
 
@@ -84,4 +90,14 @@ var ratedFill = $("#rateYo").rateYo("option", "multiColor"); //returns `Object`
  
 // Setter
 $("#rateYo").rateYo("option", "multiColor", false); // disables multi color rating and returns a jQuery Element
+
+//JavaScript for "About ASL"
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
 </script>
