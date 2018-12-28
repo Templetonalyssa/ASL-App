@@ -22,11 +22,6 @@ $("#search").on("click", function (event) {
 });
 
 
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
-
-
 function upsert(value, condition) {
   return db.Asl
     .findOne({ where: condition })
