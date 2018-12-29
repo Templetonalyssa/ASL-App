@@ -6,10 +6,15 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Asl.findAll({}).then(function(dbExamples) {
-      res.render("index", {        
+    db.Asl.findAll({group: 'search', limit:3})
+    .then(function(dbTop) {
+      // into the main index, updating the page
+        console.log(dbTop)
+        var hbsObject = {
+          top: dbTop
+        };
+        return res.render("index", hbsObject);
       });
-    });
   });
 
 

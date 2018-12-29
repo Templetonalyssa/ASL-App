@@ -26,9 +26,19 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/search", function(req,res) {
 
-   
+  app.post("/api/search", function(req,res){
+    console.log(req.body);
+    db.Asl.upsert({
+      search: req.body.search,
+      count: parseInt(req.body.count)+1
+    }).then(function() {      
+          
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
   });
 
 };
+
