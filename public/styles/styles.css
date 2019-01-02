@@ -32,8 +32,9 @@
     float: left;
   }
   
-  #top3 {
+  .topSearch {
     padding: 15px;
+     margin: 20px;
   }
   
   .w3-input {
@@ -45,12 +46,12 @@
   /* .searchdiv {
     text-align: center;
   } */
-  #top1,#top2,#top3{
-    margin: 20px;
-  }
+ 
   
   #topSearches{
-    margin: auto;
+    margin-left: 38%;
+    /* margin: auto; */
+    width: 35%;
   }
   
   .searchdiv{
@@ -83,10 +84,7 @@
   margin-left: 650px;
 }
 
-#topSearches {
-  margin: auto;
-  width: 35%;
-}
+
 #ytplayer{
   margin-left: 425px;
 }
@@ -101,3 +99,14 @@
 #textInput{
   margin-left: 400px;
 }
+#modalVideo {
+  margin: 50px;
+  
+}
+
+.savedLabel {
+  margin-left: 130px;
+}
+.savedList {
+  margin-left: 150px;
+} 
