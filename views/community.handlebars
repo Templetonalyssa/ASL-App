@@ -31,24 +31,13 @@
         
         <div id="savedsearchcard" class="w3-panel w3-card-4 w3-white" style="width: 700px; margin-right: 30px;">
          <h1>Saved Searches</h1>
-              <table class="table table-sm table-hover" id='savedsearchtable'>
-                            <thead>
-                                <tr>
-                                  <th>Rating</th>
-                                  <th>Phrase</th>  
-                                </tr>
-                                {{#each saved}}
-			  	                    {{#if this.user_id}}
-                                    <tr>
-                                        <td>{{this.rating}}</td>
-                                        <td>{{this.search}}</td>
-                                    </tr>
-                                    {{/if}}
-			                    {{/each}}
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
+            <div class="w3-container">
+                <ul class="w3-ul " id="saved-container">
+                    <li class="w3-display-container">Rating<span class="savedLabel">Phrase</span></li>
+                    
+                </ul>
+                            
+            </div>
             
              <br>
         </div>
@@ -64,10 +53,21 @@
     <br>
 </div>
     <br>
+<!-- Modal -->
+<div id="myModal" class="w3-modal">
+  <div class="w3-modal-content">
+    <div class="w3-container">        
+        <span onclick="document.getElementById('myModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <div class="videodiv">
+            <iframe id="modalVideo" type="text/html" width="640" height="360" src="https://www.youtube.com/embed?listType=search&list=" frameborder="0"></iframe> 
+        </div>   
+    </div> 
+  </div>
+</div>
     
 
- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+ <script src="/js/members.js"></script>
  <script>
     var inputBoxForm = document.getElementById("inputformbox"),
     translateButton = document.getElementById('translatebutton'); 

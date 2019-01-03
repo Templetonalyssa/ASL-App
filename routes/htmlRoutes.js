@@ -6,21 +6,43 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Asl.findAll({}).then(function(dbExamples) {
-      res.render("index", {        
+    db.Asl
+      .findAll({group: 'search', limit:3})
+      .then(function(dbTop) {
+        // into the main index, updating the page
+          
+          var hbsObject = {
+            top: dbTop
+          };
+          return res.render("index", hbsObject);
       });
-    });
   });
 
 
 //app.get for the Resources/Community Page
-  app.get("/community",  function(req, res) {
-    res.render("community");
+  app.get("/community", isAuthenticated,  function(req, res) {
+    db.Saved
+      .findAll({})
+      .then(function(dbSaved) {
+        var hbsObject = {
+          saved: dbSaved
+        };
+        return res.render("community", hbsObject);
+      });
   });
 
-  //app.get for the Resources/Community Page
-  app.get("/members", function(req, res) {
-    res.render("members");
+  //app.get for the Members Page
+  app.get("/members", isAuthenticated, function(req, res) {
+    db.Asl
+      .findAll({group: 'search', limit:3})
+      .then(function(dbTop) {
+        // into the main index, updating the page
+          
+          var hbsObject = {
+            top: dbTop
+          };
+          return res.render("members", hbsObject);
+      });
   });
 
   app.get('/logout', function(req, res){

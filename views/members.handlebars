@@ -27,16 +27,15 @@ Sign language is not a universal language — each country has its own sign lang
 
 
 
-     <div id="topSearches"> 
-      <button id="top1" src="#">Top search 1</button>
-    
-      <button id="top2" src="#">Top search 2</button>
-    
-      <button id="top3" src="#">Top search 3</button>
-      
-    </div>
+  <div id="topSearches">
+    {{#if top}}
+      {{#each top}} 
+        <button class="topSearch" id={{this.search}} >{{this.search}}</button>
+      {{/each}}
+    {{/if}}
+  </div>  
 
-    <div class="videodiv">
+  <div class="videodiv">
      <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed?listType=search&list=" frameborder="0"></iframe>
   </div> 
       
@@ -62,7 +61,7 @@ Sign language is not a universal language — each country has its own sign lang
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
-
+<script src="/js/members.js"></script>
 {{!-- javascript and style for RATEYO --}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>

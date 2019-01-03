@@ -7,6 +7,7 @@ module.exports = function(app) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
+    
     res.json("/members");
   });
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -26,9 +27,68 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/search", function(req,res) {
 
-   
+  app.post("/api/search", function(req,res){
+    console.log(req.body);
+    db.Asl.upsert({
+      search: req.body.search,
+      count: parseInt(req.body.count)+1
+    }).then(function() {      
+          
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
   });
 
+  app.post("/api/saved", function(req,res){
+    console.log(req.body);
+    db.Saved.create({
+      search: req.body.search,
+      rating: req.body.rating,
+      UserId: req.body.UserId
+    }).then(function() {      
+          
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
+  });
+
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    }
+    else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
+
+  app.get("/api/savedlist",function(req,res) {
+    db.Saved
+      .findAll({})
+      .then(function(data){
+        res.json({data})
+        
+      })
+  });
+
+  app.delete("/api/remove/:id",function(req,res) {
+    db.Saved
+      .destroy({
+        where: {
+          id:req.params.id}
+      })
+      .then(function(dbSaved){
+        res.json(dbSaved)
+      })
+  })
 };
+

@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
     var Saved = sequelize.define("Saved", {
       search: DataTypes.STRING,
-      rating: DataTypes.INTEGER,
-      url: DataTypes.TEXT
+      rating: DataTypes.REAL,
+      
     });
 
     Saved.associate = function(models) {

@@ -3,5 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     search: DataTypes.STRING,
     count: DataTypes.INTEGER
   });
+
+  
   return Asl;
 };
