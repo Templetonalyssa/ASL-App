@@ -3,7 +3,8 @@
 //youtube ajax hopefully of #search submit button
 $("#search").on("click", function (event) {
   event.preventDefault();
-  var inputText = $("#textInput").val().trim() + "asl"
+  var inputText = $("#textInput").val().trim() + " asl"
+  var input = $("#textInput").val().trim()
   $.ajax({
     url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&q=${inputText}&maxResults=1`,
     dataType: "json",
@@ -16,7 +17,7 @@ $("#search").on("click", function (event) {
   .catch(function(err){
     console.log(err);
   });
-  upsert( 0 ,  inputText );
+  upsert( 0 ,  input );
   
 });
 
@@ -34,7 +35,8 @@ function upsert(count, search) {
 
 $(".topSearch").on("click",function(event){
   event.preventDefault();
-  var inputText = this.id + "asl"
+  var inputText = this.id + " asl"
+  var input = this.id
   $.ajax({
     url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&q=${inputText}&maxResults=1`,
     dataType: "json",
@@ -47,7 +49,7 @@ $(".topSearch").on("click",function(event){
   .catch(function(err){
     console.log(err);
   });
-  upsert( 0 ,  inputText );
+  upsert( 0 ,  input);
   
 });
 

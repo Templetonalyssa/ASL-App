@@ -40,7 +40,7 @@ $(document).ready(function() {
        }
         $(".savedList").on("click",function(event){  
           event.preventDefault()  
-          var inputText = this.id + "asl"        
+          var inputText = this.id + " asl"        
           $.ajax({
             url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&q=${inputText}&maxResults=1`,
             dataType: "json",
