@@ -19,10 +19,17 @@
  ⬤ If an individual uses incorrect grammar while signing, they can be considered to have a 'foreign' accent. ⬤ Babies that are born deaf learn to use sign language to communicate in the same way babies born with hearing begin to use words to communicate. ⬤ Most of the courses taught at Gallaudet University in Washington, D.C., are taught in ASL.</marquee>
 
 
-    <div id="Demo3" class="w3-hide w3-container w3-center w3-white">
+<div class="w3-container">
+
+<button onclick="myFunction('Demo3')" class="w3-btn w3-block w3-black">
+Click Here To Learn More About ASL</button>
+
+<div id="Demo3" class="w3-hide w3-container w3-center w3-white">
   <p>American Sign Language (ASL) is a visual language. ASL is used mainly in the United States and in many parts of Canada. The shape, placement, movement of the hands,as well as facial expressions and body movements, all play important parts in conveying information.
 
 Sign language is not a universal language — each country has its own sign language, much like spoken languages. ASL is a language with its own unique rules of grammar and syntax, and continues to grow and change over time. We hope you'll enjoy using this app to assist you in communicating with other ASL speakers and participate in ASL community events near you.</p>
+</div>
+
 </div>    
 
 
@@ -43,18 +50,19 @@ Sign language is not a universal language — each country has its own sign lang
   <div class="searchdiv">
     <label id="phrasesearchlabel" class="w3-text-black"><b>Phrase Search</b></label>
     <input id ="textInput" class="w3-input w3-border w3-light-grey" type="text" placeholder="Enter a phrase to search for here!">
-
-    <div id="rateYo"></div>
-
+    <br>
+    <button id ="search" class="w3-btn w3-black">Search</button>
+    <br>
+    <br>
     {{!-- <label id="namesearchlabel" class="w3-text-black"><b>Name Search</b></label>
     <input class="w3-input w3-border w3-light-grey" type="text" placeholder="See how to sign your name in ASL here"> --}}
-    <button id ="search" class="w3-btn w3-black">Search</button> 
     <button id="save" class="w3-btn w3-black">Save Search</button>
-    </div>
+    <br>
+    <br>
+    <div id="rateYo"></div>
+    
 
-  {{!-- <div class="videodiv"></div> --}}
-
-  <div id="rateYo"></div>
+ 
     
   </div>
 </div>
@@ -73,7 +81,7 @@ Sign language is not a universal language — each country has its own sign lang
  
   $("#rateYo").rateYo({
  
-    rating    : 1.6,
+    rating    : 3.6,
     spacing   : "5px",
     multiColor: {
  

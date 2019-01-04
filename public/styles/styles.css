@@ -4,7 +4,7 @@
   }
   
   body {
-    background-color: rgb(151, 218, 214);
+    background-image:url("/img/sign-language-1.png");
   }
   
   footer {
@@ -22,16 +22,7 @@
      margin-bottom: 10px;
   }
   
-  #top1 {
-    padding: 15px;
-    float: left;
-  }
-  
-  #top2 {
-    padding: 15px;
-    float: left;
-  }
-  
+
   .topSearch {
     padding: 15px;
      margin: 20px;
@@ -110,3 +101,13 @@
 .savedList {
   margin-left: 150px;
 } 
+
+#rateYo {
+  margin: auto;
+  background-color: black;
+}
+
+#save {
+  margin-left: 675px;
+}
+
