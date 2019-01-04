@@ -31,6 +31,7 @@ module.exports = function(app) {
       });
   });
 
+<<<<<<< HEAD
   //app.get for the Members Page
   app.get("/members", isAuthenticated, function(req, res) {
     db.Asl
@@ -43,6 +44,11 @@ module.exports = function(app) {
           };
           return res.render("members", hbsObject);
       });
+=======
+  //app.get for the Resources/Community Page
+  app.get("/members",  function(req, res) {
+    res.render("members");
+>>>>>>> master
   });
 
   app.get('/logout', function(req, res){
