@@ -3,9 +3,9 @@
 //youtube ajax hopefully of #search submit button
 $("#search").on("click", function (event) {
   event.preventDefault();
-  var inputText = $("#textInput").val().trim()
+  var inputText = $("#textInput").val().trim() + "asl"
   $.ajax({
-    url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&channelId=UC2a61_fpDR-lcZQX342ho2w&q=${inputText}&maxResults=1`,
+    url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&q=${inputText}&maxResults=1`,
     dataType: "json",
     method: "GET"
   }).then(function (response) {
@@ -34,9 +34,9 @@ function upsert(count, search) {
 
 $(".topSearch").on("click",function(event){
   event.preventDefault();
-  var inputText = this.id
+  var inputText = this.id + "asl"
   $.ajax({
-    url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&channelId=UC2a61_fpDR-lcZQX342ho2w&q=${inputText}&maxResults=1`,
+    url: `https://www.googleapis.com/youtube/v3/search?part=id&key=AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk&q=${inputText}&maxResults=1`,
     dataType: "json",
     method: "GET"
   }).then(function (response) {
