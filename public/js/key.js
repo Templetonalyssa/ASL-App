@@ -1,1 +1,1 @@
-var videokey= "AIzaSyAMGCYt9mZyJZB-D79iQr1mhAwKknMMdgk";
+var videokey= "AIzaSyDWhGZ5YeFg-X63xegxm5zKrBZnifGNdkY";
